@@ -1,0 +1,179 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+:root{
+    --black: #0D0D0D;
+    --white: #fff;
+    --yellow: #F28705;
+    --red: #D91818;
+    --darkred: #8C1818;
+}
+
+::selection{
+    color: white;
+    background-color: var(--yellow);
+}
+
+*{
+    margin: 0;padding: 0;
+    font-family: "poppins";
+    box-sizing: border-box;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: .2s ease-in-out;
+    list-style: none;
+}
+body{
+    background-color: var(--white);
+    transition: 1s ease-in-out;
+}
+body.active{
+    --black: #fff;
+    --white: #0d0d0d;
+}
+html{
+    scroll-behavior: smooth;
+    scroll-padding-top: 8.5rem;
+    overflow-x: hidden;
+}
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 2rem;
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, 0.6);
+    background-color: var(--white);
+    padding: 1rem 2rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+.header .logo{
+    font-size: 2rem;
+    font-weight: 600;
+    color: var(--black);
+}
+.header .logo i{
+    color: var(--yellow);
+    margin-right: .7rem;
+}
+.header .navbar{
+    display: flex;
+
+}
+.header .navbar li a{
+    color: var(--black);
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin-left: 1rem;
+}
+.header .navbar li:hover a{
+    color: var(--yellow);
+}
+.header .actions i{
+    font-size: 1.6rem;
+    color: var(--black);
+    margin-left: .8rem;
+}
+.header .actions i:hover{
+    transition: .5s;
+    transform: rotate(360deg);
+    color: var(--yellow);
+}
+.header .actions .fa-bars{
+    display: none;
+}
+#home{
+    width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+}
+#home .one{
+    margin-left: 2rem;
+    max-width: 50vw;
+}
+#home .one h3{
+    color: var(--yellow);
+    font-size: 2.5em;
+}
+#home .one p{
+    color: var(--black);
+    font-size: 1.2em;
+    font-weight: 500;
+    text-indent: 2rem;
+    text-align: justify;
+    margin-bottom: 2rem;
+    max-width: 40vw;
+}
+#home .one a{
+    color: var(--yellow);
+    padding: .5rem .8rem;
+    font-size: 1.4em;
+    border: 2px solid var(--yellow);
+}
+#home .one a:hover{
+    background-color: var(--yellow);
+    color: var(--black);
+}
+#home .two img{
+    max-width: 50vw;
+}
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 850px){
+    #home{
+        width: 100vw;
+        flex-direction: column;
+        margin-top: 5rem;
+    }
+    #home .one{
+        width: 100vw;
+        min-width: 80vw;
+        text-align: center;
+        margin-left: 0;
+    }
+    #home .one p{
+        max-width: 80vw;
+    }
+    #home .two img {
+        max-width: 80vw;
+    }
+}
+@media (max-width: 750px) {
+    .header .actions .fa-bars{
+        display: initial;
+    }
+    .header .navbar{
+        position: absolute;
+        top: -1000%;
+        left: 0;
+        display: block;
+        width: 100%;
+        height: auto;
+        background-color: #0d0d0d;
+        opacity: 1;
+    }
+    .header .navbar.active{
+        top: 100%;
+    }
+    .header .navbar li{
+        margin: 1rem;
+        padding: 1rem;
+        border: 2px solid var(--white);
+        border-left: 5px solid var(--yellow);
+    }
+    .header .navbar li a{
+        color: yellow;
+    }
+}
