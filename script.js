@@ -1,6 +1,8 @@
 let bar = document.querySelector('.fa-bars');
 let navbar = document.querySelector('.navbar');
 let changecolor = document.querySelector('#changecolor');
+let search = document.querySelector('.fa-search');
+let search1 = document.querySelector('#search');
 
 bar.addEventListener('click',function(e) {
     if (e.target.classList == 'fas fa-bars') {
@@ -20,6 +22,21 @@ changecolor.addEventListener('click',function(e) {
         document.body.classList.remove('active');
         changecolor.classList.replace('fa-sun','fa-moon')
     }
+})
+
+navbar.addEventListener('click',function(e) {
+    if (e.target.classList == 'link') {
+        navbar.classList.remove('active');
+        bar.classList.replace('fa-times','fa-bars')
+    }
+})
+
+search.addEventListener('click',function(e) {
+    search1.classList.add('active')
+})
+
+document.querySelector('#cancel').addEventListener('click',function() {
+    search1.classList.remove('active')
 })
 
 window.onscroll = (e) => {
