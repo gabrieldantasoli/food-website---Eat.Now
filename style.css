@@ -415,7 +415,6 @@ input::placeholder{
 .footer{
     display: grid;
     grid-template-columns: repeat(auto-fit,minmax(200px,auto));
-    gap: .5rem;
     text-align: center;
     background-color: var(--black);
     padding: 2rem 0;
@@ -424,7 +423,6 @@ input::placeholder{
     display: flex;
     flex-direction: column;
     align-items: space-between;
-    margin: 0 auto;
 }
 .footer *{
     color: var(--white);
